@@ -6,5 +6,14 @@
 </head>
 <body>
     <p>test</p>
+    {% block content %}
+
+        {% for post in posts %}
+        <p> {{ post }}</p>
+        {% empty %}
+        <p> nothing </p>
+        {% endfor %}
+    {{ now }}
+    {% endblock %}
 </body>
 </html>
