@@ -22,7 +22,7 @@ from mainsite.views import homepage, showpost
 
 mypatterns = [
 	url(r'^$', homepage),
-    url(r'^post/(.+)/$', showpost),
+    url(r'^post/(.+)/$', showpost, name= 'post'),
 ]
 
 urlpatterns = [

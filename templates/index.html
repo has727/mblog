@@ -8,7 +8,7 @@
     {% block content %}
 
         {% for post in posts %}
-            <a href="/post/{{ post.slug }}">{{ post.title }}</a><br>
+            <a href="{% url 'post' post.slug %}">{{ post.title }}</a><br>
         {% empty %}
             <p> nothing </p>
         {% endfor %}
