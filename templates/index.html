@@ -13,4 +13,10 @@
             <p> nothing </p>
         {% endfor %}
 
+        {{ hour }}
+        {% if hour > 18 %}
+        <p>Good Evening</p>
+        {% elif hour < 10 %}
+        <p>Good morning</p>
+        {% endif %}
     {% endblock %}

@@ -10,6 +10,7 @@ def homepage(request):
 	templates = get_template('index.html')
 	posts = Post.objects.all()
 	now = datetime.now()
+	hour = now.time().hour
 	html = templates.render(locals())
 	return HttpResponse(html)
 
