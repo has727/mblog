@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from mainsite.views import homepage, showpost
+from mainsite.views import homepage, showpost, convert
 # from mainsite import views
 # used include function
 
@@ -23,6 +23,7 @@ from mainsite.views import homepage, showpost
 mypatterns = [
 	url(r'^$', homepage),
     url(r'^post/(.+)/$', showpost),
+	url(r'^(\d+)(\w+)/$', convert),
 ]
 
 urlpatterns = [

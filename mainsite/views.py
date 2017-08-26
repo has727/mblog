@@ -23,3 +23,13 @@ def showpost(request, slug):
 			return HttpResponse(html)
 	except:
 		return redirect('/')
+	
+
+def convert(request, num, unit):
+	templates = get_template('converion.html')
+	if unit == 'cm':
+		converted = str(int(num)*0.3937) + ' in'
+	elif unit == 'in' or 'inch' or 'inches':
+		converted = str(int(num)*2.54) + ' cm'
+	html = templates.render(locals())
+	return HttpResponse(html)
