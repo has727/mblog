@@ -23,3 +23,17 @@ def showpost(request, slug):
 			return HttpResponse(html)
 	except:
 		return redirect('/')
+	
+	
+def index(request, tvno='0'):
+	tv_list = [
+		{'name': 'Panzer II', 'tvcode': 'd5ZdYKU2dyo'},
+		{'name': 'German Wiesel', 'tvcode': 'oPgDLhyRgaM'},
+	]
+	templates = get_template('tv.html')
+	now = datetime.now()
+	tvno = tvno
+	tv = tv_list[int(tvno)]
+	html = templates.render(locals())
+	return HttpResponse(html)
+	

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="#">Now playing {{ tv.name }}</a>
+    <ul>
+        <li><a href="{%  url 'tv-url' 0 %}">Panzer II</a></li>
+        <li><a href="{%  url 'tv-url' 1 %}">German Wiesel</a></li>
+    </ul>
+
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ tv.tvcode }}"
+                frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
+    <p>the time is: {{ now }}</p>
+{% endblock %}
