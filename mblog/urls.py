@@ -18,11 +18,15 @@ from django.contrib import admin
 from mainsite.views import homepage, showpost
 # from mainsite import views
 
+mypatterns = [
+	url(r'^$', homepage),
+    url(r'^post/(.+)/$', showpost),
+]
 
 urlpatterns = [
-    # url(r'^', include('mainsite.urls', namespace='mainsite')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', homepage),
-    url(r'^post/(.+)/$', showpost),
+    url(r'^', include(mypatterns)),
    
 ]
+
+
