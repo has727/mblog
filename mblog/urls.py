@@ -15,14 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-# from mainsite.views import homepage, showpost
-from mainsite import views
+from mainsite.views import homepage, showpost
+# from mainsite import views
 
 
 urlpatterns = [
     # url(r'^', include('mainsite.urls', namespace='mainsite')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.homepage),
-    url(r'^post/(.+)/$', views.showpost),
+    url(r'^$', homepage),
+    url(r'^post/(.+)/$', showpost),
    
 ]
