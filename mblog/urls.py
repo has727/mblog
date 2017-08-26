@@ -17,6 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from mainsite.views import homepage, showpost
 # from mainsite import views
+# used include function
+
 
 mypatterns = [
 	url(r'^$', homepage),
