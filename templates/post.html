@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {% block content %}
-        <h1>{{ post.title|title }}</h1>
-        <hr>
-        {{ post.body|linebreaks }}
-        <h3>
-            <a href="/">Back to homepage</a>
-        </h3>
+{% extends 'base.html' %}
+{% block title %} {{ post.title }} - Literature {% endblock %}
+{% block headmessage %}
+    <h3>
+        {{ post.title }}
+    </h3>
+    <a href="/">Back to homepage</a>
+{% endblock %}
+{% block content %}
+    {{ post.body|linebreaks }}
 
-    {% endblock %}
-</body>
-</html>
+{% endblock %}
