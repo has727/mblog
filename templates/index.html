@@ -9,9 +9,9 @@
     {% block content %}
 
         {% for post in posts %}
-        <p> {{ post }}</p>
+            <a href="/post/{{ post.slug }}">{{ post.title }}</a><br>
         {% empty %}
-        <p> nothing </p>
+            <p> nothing </p>
         {% endfor %}
     {{ now }}
     {% endblock %}
