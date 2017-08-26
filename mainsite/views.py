@@ -23,3 +23,11 @@ def showpost(request, slug):
 			return HttpResponse(html)
 	except:
 		return redirect('/')
+	
+
+def calcs(request, num1, num2):
+	templates = get_template('cal.html')
+	now = datetime.now()
+	sum = int(num1) + int(num2)
+	html = templates.render(locals())
+	return HttpResponse(html)
