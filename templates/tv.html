@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-    <a href="#">Now playing {{ tv.name }}</a>
+    <a href="#">Now playing {{ tv.name }}</a><br>
+
+    <p>Play lists</p>
     <ul>
-        <li><a href="{%  url 'tv-url' 0 %}">Panzer II</a></li>
-        <li><a href="{%  url 'tv-url' 1 %}">German Wiesel</a></li>
+    {% for t in tv_list %}
+
+        <li><a href="{%  url 'tv-url' forloop.counter0 %}">{{ t.name }}</a></li><br>
+
+    {% endfor %}
     </ul>
-
-
     <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ tv.tvcode }}"
                 frameborder="0" allowfullscreen>
