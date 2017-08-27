@@ -16,7 +16,9 @@
         {{ hour }}
         {% if hour > 18 %}
         <p>Good Evening</p>
-        {% elif hour < 10 %}
+        {% elif hour < 12 %}
         <p>Good morning</p>
+            {% else %}
+            <p>good afternoon</p>
         {% endif %}
     {% endblock %}
