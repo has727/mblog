@@ -1,10 +1,12 @@
 {% for m in car_maker %}
-    <a href="{% url 'carlist-url' forloop.counter0 %}">{{ m }}</a><br>
+    <a href="{% url 'carlist-url' forloop.counter0 %}">{{ m }}</a><br><br>
+{#    {{ m }}#}
 {% endfor %}
 
-
+<hr>
+{{ maker_name }}  :
 {% for c in cars %}
-    {{ maker_name }}  : {{ c }}
+     {{ c }}
 {% empty %}
     <p> none in stock</p>
 {% endfor %}
