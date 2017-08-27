@@ -1,12 +1,42 @@
-{% for m in car_maker %}
-    <a href="{% url 'carlist-url' forloop.counter0 %}">{{ m }}</a><br><br>
-{#    {{ m }}#}
-{% endfor %}
+{#<p>Car brands:</p>#}
+{#{% for m in car_maker %}#}
+{#    <a href="{% url 'carlist-url' forloop.counter0 %}">{{ m }}</a>&nbsp;&nbsp;#}
+{#{% endfor %}#}
+{##}
+{#<hr>#}
+{#{{ maker_name }}  :#}
+{#{% for c in cars %}#}
+{#    {% if forloop.first %}#}
+{#    <table>#}
+{#        <tr><td>Car maker</td><td>Make</td></tr>#}
+{#        {% endif %}#}
+{#        <tr bgcolor="{% cycle '#eee' '#ccc' %}">#}
+{#            <td>{{ maker_name}}</td><td>{{ c}}</td>#}
+{#        </tr>#}
+{#    {% if forloop.last %}#}
+{#    </table>#}
+{#    {% endif %}#}
+{##}
+{#{% empty %}#}
+{#    <p> none in stock</p>#}
+{#{% endfor %}#}
+{% now 'D d M Y h:m:s a' %}
+<br>
+{% lorem 2 p random %}
+{##}
+{#{% for b in a %}#}
+{##}
+{#    {{ b.car }}<br>#}
+{##}
+{#{% endfor %}#}
 
-<hr>
-{{ maker_name }}  :
-{% for c in cars %}
-     {{ c }}
-{% empty %}
-    <p> none in stock</p>
-{% endfor %}
+<p>Car Manufacture</p>
+
+{{ carM }}<br><br>
+
+    {% for y in carMo %}
+
+        {{ y }}&nbsp;&nbsp;
+    {% endfor %}
+
+

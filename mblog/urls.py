@@ -23,7 +23,7 @@ from mainsite.views import homepage, showpost, carlist
 mypatterns = [
 	url(r'^$', homepage),
     url(r'^post/(.+)/$', showpost, name= 'post'),
-	url(r'^carlist/(\d{1})/$', carlist, name='carlist-url'),
+	url(r'^carlist/(?P<brand_id>\d+)/$', carlist, name='carlist-url'),
 ]
 
 urlpatterns = [

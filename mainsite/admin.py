@@ -1,5 +1,5 @@
 from django.contrib import admin
-from mainsite.models import Post
+from mainsite.models import Post, carManufacture, carModels
 
 # Register your models here.
 
@@ -9,3 +9,5 @@ class PostAdmin(admin.ModelAdmin):
 
 	
 admin.site.register(Post, PostAdmin)
+admin.site.register(carManufacture)
+admin.site.register(carModels)

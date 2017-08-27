@@ -16,5 +16,23 @@ class Post(models.Model):
 		
 	def __str__(self):
 		return self.title
+
+
+class carManufacture(models.Model):
+	manufacture = models.CharField(max_length=10)
+	
+	def __str__(self):
+		return self.manufacture
+	
+	
+class carModels(models.Model):
+	manufacture = models.ForeignKey(carManufacture, null=True)
+	carmodels = models.CharField(max_length=10)
+
+	def __str__(self):
+		return self.carmodels
+	
+	
+
 	
 	
